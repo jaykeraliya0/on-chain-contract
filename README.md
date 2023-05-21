@@ -8,7 +8,7 @@ This is simple hardhat project for on chain nft (ERC-721) smart contract.
 0xd205779A6C4D4Bd0Abf93F290c692AD4AaaCcEe2
 ```
 
-## How To Deploy
+# How To Deploy
 
 Update hardhat.config.js and run following
 
