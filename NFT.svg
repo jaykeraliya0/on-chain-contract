@@ -1,0 +1,4 @@
+<svg width="500" height="500" xmlns="http://www.w3.org/2000/svg">
+    <path fill="#0d93a8" d="M0 0h500v500H0z" />
+    <text text-anchor="middle" font-size="41" y="50%" x="50%" fill="#fff" dominant-baseline="middle" font-family="Arial, Helvetica, sans-serif">Hello World</text>
+</svg>
