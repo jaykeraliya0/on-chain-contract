@@ -38,3 +38,6 @@ Before using any of the following code for production, kindly review it on your 
 I won't be held responsible in any way for how the code is used.
 To the best of the developers' ability, the code has been tested to ensure that it performs as intended.
 ```
+
+# Credits
+Thanks to [Brechtpd](https://github.com/Brechtpd) for Base64.sol contract
