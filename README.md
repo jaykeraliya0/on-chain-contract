@@ -10,11 +10,24 @@ This is simple hardhat project for on chain nft (ERC-721) smart contract.
 
 # How To Deploy
 
-Update hardhat.config.js and run following
+1. Install dependencies
 
 ```shell
 npm install
-npx hardhat run scripts/deploy.ts
+```
+
+2. Add Alchemy API key and private key in .env file
+
+3. Test smart contract
+
+```shell
+npx hardhat test
+```
+
+4. Deploy smart contract on goerli testnet
+
+```shell
+npx hardhat run scripts/deploy.ts --network goerli
 ```
 
 # ⚠️ Disclaimer
