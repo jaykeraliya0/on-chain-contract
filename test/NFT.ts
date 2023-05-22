@@ -1,20 +1,19 @@
 import { ethers } from "hardhat";
 import { Signer } from "ethers";
 import { expect } from "chai";
+import { Contract } from "ethers";
 
 describe("NFT Contract", function () {
-  let NFT: any;
-  let nft: any;
+  let nft: Contract;
   let owner: Signer;
   let addr1: Signer;
   let addr2: Signer;
 
   beforeEach(async () => {
-    NFT = await ethers.getContractFactory("NFT");
+    const NFT = await ethers.getContractFactory("NFT");
     [owner, addr1, addr2] = await ethers.getSigners();
 
     nft = await NFT.deploy();
-    await nft.deployed();
   });
 
   it("should mint a new NFT", async function () {
