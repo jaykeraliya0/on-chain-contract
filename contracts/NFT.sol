@@ -9,31 +9,7 @@ import "./Base64.sol";
 contract NFT is ERC721Enumerable, Ownable {
     using Strings for uint256;
 
-    string[] public wordValues = [
-        "Pixel",
-        "Crypto",
-        "Digital",
-        "Art",
-        "Token",
-        "Algorithm",
-        "Virtual",
-        "Collectible",
-        "Rarity",
-        "Innovation",
-        "Genesis",
-        "Immutable",
-        "Interoperability",
-        "Metaverse",
-        "Algorithmic",
-        "Aesthetic",
-        "Transparent",
-        "Proof-of-Ownership",
-        "Tokenization",
-        "Futuristic",
-        "Smart Contract",
-        "Cryptocurrency",
-        "Algorithmic"
-    ];
+    string[] public wordValues = [""]; // Add words here
 
     struct Word {
         string name;
@@ -49,7 +25,7 @@ contract NFT is ERC721Enumerable, Ownable {
     uint256 public maxSupply = 10000;
     bool public paused = false;
 
-    constructor() ERC721("On Chain NFT", "OCN") {}
+    constructor() ERC721("__TOKEN_NAME__", "__TOKEN_SYMBOL__") {}
 
     function mint() public payable {
         uint256 supply = totalSupply();
@@ -57,11 +33,11 @@ contract NFT is ERC721Enumerable, Ownable {
         require(supply + 1 <= maxSupply);
 
         Word memory newWord = Word(
-            string(abi.encodePacked("OCN #", (supply + 1).toString())),
-            string(abi.encodePacked("On Chain NFT #", (supply + 1).toString())),
-            randomNum(361, block.difficulty, supply).toString(),
-            randomNum(361, block.timestamp, 2).toString(),
-            wordValues[randomNum(wordValues.length, block.difficulty, supply)]
+            string(abi.encodePacked("OCN #", (supply + 1).toString())), // Name
+            string(abi.encodePacked("On Chain NFT #", (supply + 1).toString())), // Description
+            randomNum(361, block.difficulty, supply).toString(), // Background Hue
+            randomNum(361, block.timestamp, 2).toString(), // Text Hue
+            wordValues[randomNum(wordValues.length, block.difficulty, supply)] // Value
         );
 
         if (msg.sender != owner()) {
